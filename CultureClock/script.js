@@ -1,15 +1,17 @@
+var noon = 12;
+
 // getting it to show the current time on the page
-const showCurrentTine = function() {
+var showCurrentTine = function() {
     
     // display the string on the on the webpage
-    let clock = document.getElementById('clock');
+    var clock = document.getElementById('clock');
 
-    let currentTime = new Date();
+    var currentTime = new Date();
 
-    let hours = currentTime.getHours();
-    let minutes = currentTime.getMinutes();
-    let seconds = currentTime.getSeconds();
-    let meridian = "AM";
+    var hours = currentTime.getHours();
+    var minutes = currentTime.getMinutes();
+    var seconds = currentTime.getSeconds();
+    var meridian = "AM";
 
     //Set hours
     if (hours >= noon) {
@@ -30,8 +32,12 @@ const showCurrentTine = function() {
     }
 
     // putting together a string that displays the time
-    let clockTime = hours + ':' + minutes + ':' + seconds + " " + meridian + "!";
+    var clockTime = hours + ':' + minutes + ':' + seconds + " " + meridian + "!";
 
     clock.innerText = clockTime;
 
 };
+
+var updateClock = function() {
+    var time = new Date().getHours();
+}
